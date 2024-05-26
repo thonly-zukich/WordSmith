@@ -1,0 +1,269 @@
+body {
+    background-color: rgba(0, 0, 255, 0.2);
+    background-image: url('../assets/back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 880px;
+    margin: 22px auto;
+    padding: 22px;
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
+}
+
+.word-box {
+    margin-bottom: 22px;
+    position: relative;
+}
+
+input[type="text"] {
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 5.5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 11px 22px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5.5px;
+    cursor: pointer;
+}
+
+#message {
+    margin-top: 11px;
+    color: red;
+}
+
+.site-title {
+    color: #007bff;
+}
+
+.learned-words-container {
+    max-width: 880px;
+    margin: 22px auto;
+    padding: 22px;
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
+}
+
+.learned-words-container h2 {
+    color: #007bff;
+}
+
+#learned-words-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#learned-words-list li {
+    margin-bottom: 5.5px;
+}
+
+#loading {
+    color: grey;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 22px;
+}
+
+.button-container button {
+    margin-top: 11px;
+}
+
+.translation-input {
+    margin-left: 11px;
+    padding: 5.5px;
+    width: 165px;
+}
+
+.glossary-container {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 200px;
+    height: 90%;
+    overflow-y: auto;
+    background-color: #fff;
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0.3);
+    padding: 22px;
+    border: 1px solid #ccc;
+}
+
+.glossary-container h2 {
+    color: #333;
+    margin-bottom: 11px;
+}
+
+#glossary-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#glossary-list li {
+    margin-bottom: 5.5px;
+}
+
+.edit-btn {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    margin-left: 11px;
+}
+
+.mode-switch {
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    display: flex;
+    gap: 11px;
+}
+
+.mode-switch label {
+    cursor: pointer;
+}
+
+.mode-switch input[type="radio"] {
+    margin-right: 5.5px;
+}
+
+.glossary-container li {
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.glossary-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.glossary-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5.5px;
+}
+
+.glossary-actions span {
+    cursor: pointer;
+    text-decoration: underline;
+    color: gray;
+}
+
+.glossary-item + .glossary-item::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+    margin: 11px 0;
+}
+
+.clear-glossary-btn {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 5.5px;
+    cursor: pointer;
+}
+
+.play-container {
+    margin-top: 22px;
+}
+
+.translation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#save-words-btn {
+    margin-right: auto;
+}
+
+#play-btn {
+    margin-left: auto;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5.5px;
+    cursor: pointer;
+    padding: 11px 22px;
+    font-size: 16px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Darken background */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#edit-translation-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#save-edit-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Word Teacher</title>
+    <link rel="stylesheet" href="./css/learn.css">
+</head>
+<body>
+<div class="glossary-container">
+    <h2>Glossary📘</h2>
+    <ul id="glossary-list"></ul>
+</div>
+<div class="main-content">
+    <div class="container">
+        <h1 class="site-title">English Word Teacher 😊</h1>
+        <div class="word-box">
+            <div class="mode-switch">
+                <label>
+                    <input type="radio" name="mode" value="random" checked> Random
+                </label>
+                <label>
+                    <input type="radio" name="mode" value="author"> Author
+                </label>
+            </div>
+            <h3 id="loading">And your new English word is...</h3>
+            <h2 id="word-display">English Word</h2>
+            <input type="text" id="answer-input" placeholder="Now rewrite the word above!📝">
+            <div class="button-container">
+                <button id="check-btn">Check</button>
+                <button id="add-btn" style="display: none;">Add</button>
+                <button id="next-word-btn">Next Word</button>
+            </div>
+        </div>
+        <div id="message"></div>
+    </div>
+    <div class="learned-words-container">
+        <h2>Add translation:</h2>
+        <ul id="learned-words-list"></ul>
+        <div class="translation-buttons">
+            <button id="save-words-btn">Save All Words</button>
+            <button onclick="window.location.href='play.html'" id="play-btn">Play</button>
+        </div>
+    </div>
+</div>
+<button id="clear-glossary-btn" class="clear-glossary-btn">Clean Glossary</button>
+
+<!-- Modal structure for editing glossary words -->
+<div id="edit-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Edit Translation</h2>
+        <input type="text" id="edit-translation-input" placeholder="Enter new translation">
+        <button id="save-edit-btn">Save</button>
+    </div>
+</div>
+
+<!-- JavaScript files -->
+<script src="./js/learn/utils.js"></script>
+<script src="./js/learn/domElements.js"></script>
+<script src="./js/learn/glossary.js"></script>
+<script src="./js/learn/eventListeners.js"></script>
+<script src="./js/learn/main.js"></script>
+
+<!-- Initialization script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        loadGlossary();
+        setupEventListeners();
+        toggleMode();
+        fetchWords(); // Ensure this function is called to fetch the words from the API
+    });
+</script>
+</body>
+</html>
