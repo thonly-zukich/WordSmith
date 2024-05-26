@@ -22,7 +22,13 @@ WordSmith is an interactive web application designed to help users learn and pra
 - **Pop-Up Quiz Interface:** Engaging quiz interface with a countdown timer and score display.
 - **User Feedback:** Immediate feedback on correct or incorrect answers.
 
-## Getting Started
+## Preview
+![image](https://github.com/thonly-zukich/WordSmith/assets/142508205/644a6328-cd09-4377-bea0-33c2cb5d0224)
+![image](https://github.com/thonly-zukich/WordSmith/assets/142508205/fa0cdadd-a020-488b-9475-4f1040c3bfaf)
+![image](https://github.com/thonly-zukich/WordSmith/assets/142508205/c77a3787-b05d-4378-b597-5f3b65bfeda3)
+
+
+
 
 ### Prerequisites
 To run this project, you need a web browser that supports JavaScript ES6 modules.
